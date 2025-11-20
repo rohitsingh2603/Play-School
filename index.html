@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunshine Play School</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to bottom, #fff7fa, #ffeef6);
+    }
+
+    /* ==== HEADER STYLES ==== */
+    .navbar {
+      background: linear-gradient(90deg, #ff6f91, #ff9a9e);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .navbar-brand {
+      font-weight: bold;
+      color: white !important;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .navbar-brand img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: white;
+      padding: 4px;
+    }
+    .nav-link {
+      color: white !important;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    .nav-link:hover {
+      color: #ffe7ef !important;
+    }
+    .carousel-item img {
+      border-radius: 20px;
+      height: 400px;
+      object-fit: cover;
+    }
+    .hero-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      gap: 20px;
+    }
+    .hero-text {
+      flex: 1;
+      min-width: 300px;
+      padding: 30px;
+    }
+    .hero-text h1 {
+      color: #ff6f91;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    .hero-text p {
+      color: #444;
+      font-size: 1.1rem;
+      margin-top: 15px;
+    }
+    footer {
+      background-color: #ff6f91;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+    @media (max-width: 768px) {
+      .hero-section {
+        flex-direction: column;
+      }
+      .carousel-item img {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🌈 Modern Header -->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo.png" alt="Logo"> Sunshine Play School
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section (Half Slider + Half Info) -->
+  <section class="hero-section container">
+    <!-- Left: Slider -->
+    <div id="schoolCarousel" class="carousel slide flex-fill" data-bs-ride="carousel" style="max-width: 600px;">
+      <div class="carousel-inner rounded-4 shadow">
+        <div class="carousel-item active">
+          <img src="images/kids playing.png" class="d-block w-100" alt="Kids Playing">
+        </div>
+        <div class="carousel-item">
+          <img src="images/fun learning.png" class="d-block w-100" alt="Fun Learning">
+        </div>
+        <div class="carousel-item">
+          <img src="images/creative play.png" class="d-block w-100" alt="Creative Play Area">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#schoolCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#schoolCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+    <!-- Right: Information -->
+    <div class="hero-text">
+      <h1>Welcome to Sunshine Play School</h1>
+      <p>
+        A joyful place for early learning! 🌈  
+        At Sunshine Play School, we inspire curiosity and creativity through fun-filled learning.
+        Our nurturing environment helps children build confidence, imagination, and social skills.
+      </p>
+      <p>
+        👶 Safe Play Area<br>
+        🎨 Creative Activities<br>
+        📚 Expert Teachers
+      </p>
+      <a href="#contact" class="btn mt-3" style="background-color:#ff6f91;color:white;">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- Programs -->
+  <section id="programs" class="container mt-5">
+    <h2 class="text-center text-danger mb-4 fw-bold">Our Programs</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0 rounded-4 h-100">
+          <img src="images/play group.png" class="card-img-top rounded-top-4" alt="Play Group">
+          <div class="card-body text-center bg-warning-subtle rounded-bottom-4">
+            <h5 class="card-title text-danger">Play Group</h5>
+            <p>Fun-filled learning activities to develop creativity and social interaction.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0 rounded-4 h-100">
+          <img src="images/nursery class.png" class="card-img-top rounded-top-4" alt="Nursery">
+          <div class="card-body text-center bg-warning-subtle rounded-bottom-4">
+            <h5 class="card-title text-danger">Nursery</h5>
+            <p>Structured learning with art, music, and play-based education.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0 rounded-4 h-100">
+          <img src="images/kindergarten.png" class="card-img-top rounded-top-4" alt="Kindergarten">
+          <div class="card-body text-center bg-warning-subtle rounded-bottom-4">
+            <h5 class="card-title text-danger">Kindergarten</h5>
+            <p>Preparatory curriculum to build literacy, numeracy, and confidence.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="container mt-5">
+    <h2 class="text-center text-danger mb-4 fw-bold">Our Gallery</h2>
+    <div class="row g-3">
+      <div class="col-md-3 col-6"><img src="images/gallery 1.png" class="img-fluid rounded shadow-sm" alt="Gallery 1"></div>
+      <div class="col-md-3 col-6"><img src="images/gallery 2.png" class="img-fluid rounded shadow-sm" alt="Gallery 2"></div>
+      <div class="col-md-3 col-6"><img src="images/3.png" class="img-fluid rounded shadow-sm" alt="Gallery 3"></div>
+      <div class="col-md-3 col-6"><img src="images/gallery 4.png" class="img-fluid rounded shadow-sm" alt="Gallery 4"></div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container mt-5 mb-5 p-5 bg-light rounded-4 shadow-sm">
+    <h2 class="text-center text-danger fw-bold">Contact Us</h2>
+    <div class="row mt-4">
+      <div class="col-md-6 mb-4">
+        <form>
+          <div class="mb-3">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control" placeholder="Enter your name">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" placeholder="Enter your email">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Message</label>
+            <textarea class="form-control" rows="4" placeholder="Write your message"></textarea>
+          </div>
+          <button type="submit" class="btn" style="background-color:#ff6f91;color:white;">Send Message</button>
+        </form>
+      </div>
+      <div class="col-md-6 text-center d-flex flex-column justify-content-center">
+        <h5 class="text-danger mb-3">Visit Us</h5>
+        <p>Sunshine Play School,<br>123 Rainbow Street,<br>Happy Town, India</p>
+        <p><strong>Phone:</strong> +91 98765 43210</p>
+        <p><strong>Email:</strong> info@sunshineplayschool.com</p>
+        <img src="images/map.png" class="img-fluid rounded shadow-sm mt-3" alt="Map">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © <script>document.write(new Date().getFullYear());</script> Sunshine Play School. All rights reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
